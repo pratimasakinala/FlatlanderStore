@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang-"en" ng-app="gemStore">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="../assets/bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+  <script type="text/javascript" src="../assets/bower_components/angular/angular.js"></script>
+
+  <script type="text/javascript" src="js/module.js"></script>
+  <!-- controllers -->
+  <script src="js/store/product/gems/gems.controller.js"></script>
+  <script src="js/store/gallery/gallery.controller.js"></script>
+  <script src="js/store/panels/panels.controller.js"></script>
+  <script src="js/store/product/review/review.controller.js"></script>
+
+  <!-- directives -->
+  <script src="js/store/product/title/productTitle-directive.js"></script>
+  <script src="js/store/product/specs/productSpecs-directive.js"></script>
+  <script src="js/store/product/description/productDescription-directive.js"></script>
+  <script src="js/store/gallery/gallery-directive.js"></script>
+  <script src="js/store/product/review/productReview-directive.js"></script>
+  <script src="js/store/panels/panels-directive.js"></script>
+
+  <title>Flatlander Store</title>
+</head>
+<body class="list-group" ng-controller="GemsController as store">
+  <header>
+    <h1 class="text-center">Flatlander Crafted Gems</h1>
+    <h2 class="text-center">- an Angular store -</h2>
+  </header>
+
+  <!-- Product Container -->
+  <div class="list-group-item" ng-repeat="gem in store.gems">
+      <div ng-hide="gem.soldOut">
+        <product-title></product-title>
+        <product-gallery></product-gallery>
+
+        <!-- <button ng-show="product.canPurchase">Add to cart</button> -->
+
+        <product-panels></product-panels>
+
+      </div>
+  </div>
+</body>
+</html>

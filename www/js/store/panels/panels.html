@@ -1,0 +1,19 @@
+<ul class="nav nav-pills">
+  <li ng-class="{active: panels.isSelected(1)}">
+    <a href ng-click="panels.selectTab(1)">Description</a>
+  </li>
+  <li ng-class="{active: panels.isSelected(2)}">
+    <a href ng-click="panels.selectTab(2)">Specifications</a>
+  </li>
+  <li ng-class="{active: panels.isSelected(3)}">
+    <a href ng-click="panels.selectTab(3)">Reviews</a>
+  </li>
+</ul>
+
+<!-- element type directive -->
+<product-description class="panel" ng-show="panels.isSelected(1)"></product-description>
+
+<!-- attribute type directive (product-specs) -->
+<div class="panel" ng-show="panels.isSelected(2)" product-specs></div>
+
+<product-review class="panel" ng-show="panels.isSelected(3)"></product-review>
