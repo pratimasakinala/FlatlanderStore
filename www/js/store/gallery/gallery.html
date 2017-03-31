@@ -1,7 +1,7 @@
 <div class="gallery" ng-show="gem.images.length" >
   <img ng-src="images/{{gem.images[gallery.current]}}"/>
   <ul class="list-inline thumbs">
-    <li class="thumbnail" ng-repeat="image in gem.images">{{image}}
+    <li class="thumbnail image" ng-repeat="image in gem.images">{{image}}
       <img ng-src="images/{{image}}" />
     </li>
   </ul>

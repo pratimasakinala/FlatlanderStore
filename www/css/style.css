@@ -4,6 +4,26 @@
 .ng-valid.ng-dirty {
   border-color: #78FA89;
 }
+
 .product-title {
   height: 30px;
+}
+
+body {
+  background-color: #808080;
+}
+
+.container {
+  background-color: #F0FFF0;
+}
+
+img {
+  align-self: center;
+  height: 60px;
+  width: 60px;
+}
+
+.image {
+  background-color: inherit;
+  border: none;
 }

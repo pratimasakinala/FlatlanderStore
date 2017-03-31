@@ -33,15 +33,12 @@
   </header>
 
   <!-- Product Container -->
-  <div class="list-group-item" ng-repeat="gem in store.gems">
+  <div class="list-group-item container" ng-repeat="gem in store.gems">
       <div ng-hide="gem.soldOut">
         <product-title></product-title>
         <product-gallery></product-gallery>
-
         <!-- <button ng-show="product.canPurchase">Add to cart</button> -->
-
         <product-panels></product-panels>
-
       </div>
   </div>
 </body>
